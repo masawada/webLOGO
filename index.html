@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!--[if !IE]>--><link rel="stylesheet" href="./css/style.css" type="text/css"><!--<![endif]-->
+		<script type="text/javascript" src="./js/palm.js"></script>
+		<title>webLOGO</title>
+	</head>
+	<body>
+		<div id="canvasArea">
+			<canvas id="canvas" width="100" height="100"></canvas>
+			<div id="pointer"></div>
+		</div>
+		<ul id="ctrMenu">
+			<li><a href="javascript:void(0);">Edit</a></li>
+			<li><a href="javascript:void(0);">Setting</a></li>
+			<li><a href="javascript:void(0);">Error</a></li>
+		</ul>
+		<ul id="ctrPanels">
+			<li id="editor" class="visible">
+				<form action="#">
+					<div class="editorTop">
+						<p></p>
+						<p class="pd">
+							<select id="sourceSelector">
+								<option>新しいコード</option>
+							</select>
+						</p>
+					</div>
+					<div class="editorMid" id="editorArea">
+						<p>
+							<textarea id="editorMain"></textarea>
+						</p>
+					</div>
+					<div class="editorBottom">
+						<p class="pd">
+							<input type="checkbox"> 全画面で描画
+						</p>
+						<p><a href="javascript:void(0);">Draw</a></p>
+					</div>
+				</form>
+			</li>
+			<li id="setting" class="visible">
+				セッティング
+				
+			</li>
+			<li id="error">
+				
+				
+			</li>
+		</ul>
+		<p id="errorIndicator"><a href="javascript:void(0);">5 errors</a></p>
+	</body>
+</html>
