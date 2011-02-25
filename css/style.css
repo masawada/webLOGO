@@ -72,12 +72,9 @@ overflow:visible;
 }
 
 #ctrPanels > li{
-display:none;
 position:absolute;
-}
-
-#ctrPanels > li.visible{
-display:block;
+-webkit-border-radius:8px;
+-webkit-box-shadow:#777777 1px 1px 10px;
 }
 
 #editor{
@@ -85,17 +82,20 @@ position:absolute;
 width:300px;
 height:400px;
 background:#FF4444;
-z-index:3;
 }
 
 #setting{
 position:absolute;
-top:48px;
-left:12px;
+width:400px;
+height:200px;
+background:#44FF44;
+}
+
+#error{
+position:absolute;
 width:300px;
 height:400px;
-background:#44FF44;
-z-index:2;
+background:#4444FF;
 }
 
 /* errorIndicator */

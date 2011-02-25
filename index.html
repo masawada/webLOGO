@@ -2,8 +2,11 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<!--[if !IE]>--><link rel="stylesheet" href="./css/style.css" type="text/css"><!--<![endif]-->
+		<link rel="stylesheet" href="./css/style.css" type="text/css">
+		<script type="text/javascript" src="./js/excanvas.js"></script>
+		<script type="text/javascript" src="./js/rturtle0.js"></script>
 		<script type="text/javascript" src="./js/palm.js"></script>
+		<script type="text/javascript" src="./js/weblogo.js"></script>
 		<title>webLOGO</title>
 	</head>
 	<body>
@@ -17,8 +20,8 @@
 			<li><a href="javascript:void(0);">Error</a></li>
 		</ul>
 		<ul id="ctrPanels">
-			<li id="editor" class="visible">
-				<form action="#">
+			<li id="editor">
+				<form action="#" name="source">
 					<div class="editorTop">
 						<p></p>
 						<p class="pd">
@@ -40,14 +43,14 @@
 					</div>
 				</form>
 			</li>
-			<li id="setting" class="visible">
+			<li id="setting">
 				セッティング
 				
 			</li>
-			<li id="error">
+			<!--<li id="error">
 				
 				
-			</li>
+			</li>-->
 		</ul>
 		<p id="errorIndicator"><a href="javascript:void(0);">5 errors</a></p>
 	</body>
