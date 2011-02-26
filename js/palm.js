@@ -28,8 +28,11 @@ var Palm = function(panels){
 				// move
 				this.style.cursor = 'all-scroll';
 				this.onmousedown = function(e){
-					self.bringToTop_(this.id);
-					self.dragDown_(e, this);
+					if(e.target === this){
+						self.bringToTop_(this.id);
+						self.dragDown_(e, this);
+						return false;
+					}
 				};
 			}
 		};
