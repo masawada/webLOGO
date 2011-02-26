@@ -21,9 +21,13 @@ z-index:0;
 
 /* canvasArea */
 #canvasArea{
+width:600px;
+height:400px;
 position:absolute;
 top:50%;
 left:50%;
+margin-top:-201px;
+margin-left:-301px;
 border:solid 1px #CCCCCC;
 z-index:100;
 }

@@ -30,7 +30,6 @@ var Palm = function(panels){
 				this.onmousedown = function(e){
 					self.bringToTop_(this.id);
 					self.dragDown_(e, this);
-					return false;
 				};
 			}
 		};
@@ -146,7 +145,6 @@ Palm.prototype = (function(){
 	proto.dragMove_ = function(e, that, startX, startY){
 		that.style.left = startX + e.clientX + 'px';
 		that.style.top = startY + e.clientY + 'px';
-		return false;
 	};
 	
 	// private

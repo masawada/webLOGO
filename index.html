@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<div id="canvasArea">
-			<canvas id="canvas" width="100" height="100"></canvas>
+			<canvas id="canvas" width="600" height="400"></canvas>
 			<div id="pointer"></div>
 		</div>
 		<ul id="ctrMenu">
@@ -21,31 +21,40 @@
 		</ul>
 		<ul id="ctrPanels">
 			<li id="editor">
-				<form action="#" name="source">
+				<form action="#" id="control">
 					<div class="editorTop">
 						<p></p>
 						<p class="pd">
-							<select id="sourceSelector">
-								<option>新しいコード</option>
+							<select name="samples">
+								<option>例：</option>
 							</select>
 						</p>
 					</div>
 					<div class="editorMid" id="editorArea">
 						<p>
-							<textarea id="editorMain"></textarea>
+							<textarea name="source"></textarea>
 						</p>
 					</div>
 					<div class="editorBottom">
 						<p class="pd">
 							<input type="checkbox"> 全画面で描画
 						</p>
-						<p><a href="javascript:void(0);">Draw</a></p>
+						<p><a href="javascript:void(0);" id="runcode">Draw</a></p>
 					</div>
 				</form>
 			</li>
 			<li id="setting">
-				セッティング
-				
+				<form action="#" id="preference">
+					<p class="pd">
+							<select name="interval">
+								<option value="1000">ちょうはやい</option>
+								<option value="500">はやい</option>
+								<option value="100">ふつう</option>
+								<option value="50">おそい</option>
+								<option value="10">ちょうおそい</option>
+							</select>
+						</p>
+				</form>
 			</li>
 			<!--<li id="error">
 				
