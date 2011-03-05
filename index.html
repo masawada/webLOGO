@@ -2,65 +2,66 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="./css/style.css" type="text/css">
+		<title>webLOGO</title>
 		<script type="text/javascript" src="./js/excanvas.js"></script>
 		<script type="text/javascript" src="./js/rturtle0.js"></script>
 		<script type="text/javascript" src="./js/palm.js"></script>
 		<script type="text/javascript" src="./js/weblogo.js"></script>
-		<title>webLOGO</title>
+		<link rel="stylesheet" href="./css/style.css" type="text/css">
 	</head>
 	<body>
 		<div id="canvasArea">
-			<canvas id="canvas" width="600" height="400"></canvas>
+			<canvas id="canvas" width="640" height="480"></canvas>
 			<div id="pointer"></div>
 		</div>
-		<ul id="ctrMenu">
-			<li><a href="javascript:void(0);">Edit</a></li>
-			<li><a href="javascript:void(0);">Setting</a></li>
-			<li><a href="javascript:void(0);">Error</a></li>
-		</ul>
-		<ul id="ctrPanels">
+		<!--<ul id="controlMenu">
+			<li><a href="#" id="openEditor">編集</a></li>
+			<li><a href="#" id="openSetting">設定</a></li>
+			<li><a href="#" id="openError">エラー</a></li>
+		</ul>-->
+		<ul id="panels">
 			<li id="editor">
 				<form action="#" id="control">
 					<div class="editorTop">
-						<p></p>
-						<p class="pd">
+						<p class="closeBox"><a href="#" id="close" onclick="alert('機能が未実装です')">閉じる</a></p>
+						<p class="sampleSelector">
 							<select name="samples">
 								<option>例：</option>
 							</select>
 						</p>
 					</div>
-					<div class="editorMid" id="editorArea">
+					<div class="editorMid">
 						<p>
-							<textarea name="source"></textarea>
+							<textarea name="source" class="sourceMain"></textarea>
 						</p>
 					</div>
 					<div class="editorBottom">
-						<p class="pd">
-							<input type="checkbox"> 全画面で描画
-						</p>
-						<p><a href="javascript:void(0);" id="runcode">Draw</a></p>
+						<p class="runButton"><a href="#" id="runCode">描画する</a></p>
 					</div>
 				</form>
 			</li>
 			<li id="setting">
+				<p class="settingTitle">設定</p>
 				<form action="#" id="preference">
-					<p class="pd">
-							<select name="interval">
-								<option value="1000">ちょうはやい</option>
-								<option value="500">はやい</option>
-								<option value="100">ふつう</option>
-								<option value="50">おそい</option>
-								<option value="10">ちょうおそい</option>
-							</select>
-						</p>
+					<p class="settingItem">
+						アニメーション速度：<br/>
+						<select name="intervalNum">
+							<option value="100">とてもはやい</option>
+							<option value="30">はやい</option>
+							<option value="10">ふつう</option>
+							<option value="1">おそい</option>
+							<option value="0.5">とてもおそい</option>
+						</select>
+					</p>
+					<p class="settingItem">よこ：<br/><input type="text" name="canvasWidth" value="640">px</p>
+					<p class="settingItem">たて：<br/><input type="text" name="canvasHeight" value="480">px</p>
 				</form>
 			</li>
-			<!--<li id="error">
-				
-				
-			</li>-->
+			<li id="error">
+				<p class="errorTitle">エラー</p>
+				<div id="errorPanel"></div>
+			</li>
 		</ul>
-		<p id="errorIndicator"><a href="javascript:void(0);">5 errors</a></p>
+		<p class="errorIndicator"><a href="#" id="errorIndicator"></a></p>
 	</body>
 </html>

@@ -17,7 +17,7 @@ if (!String.prototype.trim) {
  */
 function Validator() {
 	// properties
-	this.reg = /^(setsize)$|^(moveto\s[0-9]+\s[0-9]+)$|^(move\s[0-9]+\s[0-9]+)$|^(center)$|^(forward\s[0-9]+)$|^(Turn\s[0-9]+)$|^(repeat\s[0-9]+\s\[)$|^(\])$/i;
+	this.reg = /^(setsize)$|^(moveto\s[0-9]+\s[0-9]+)$|^(move\s-?[0-9]+\s-?[0-9]+)$|^(center)$|^(forward\s[0-9]+)$|^(Turn\s-?[0-9]+)$|^(repeat\s[0-9]+\s\[)$|^(\])$/i;
 }
 Validator.prototype = (function() {
 	var proto = {};

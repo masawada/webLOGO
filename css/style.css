@@ -13,28 +13,30 @@ height:100%;
 }
 
 body{
-position:absolute;
 overflow:hidden;
 background:#F0F0F0;
-z-index:0;
 }
 
-/* canvasArea */
+/* canvas area */
 #canvasArea{
-width:600px;
-height:400px;
 position:absolute;
 top:50%;
 left:50%;
-margin-top:-201px;
-margin-left:-301px;
+width:640px;
+height:480px;
+margin-top:-241px;
+margin-left:-321px;
 border:solid 1px #CCCCCC;
-z-index:100;
+background:#FFFFFF;
+z-index:0;
 }
 
 #canvas{
+position:absolute;
+top:0;
+left:0;
 background:#FFFFFF;
-z-index:110;
+z-index:1;
 }
 
 #pointer{
@@ -43,86 +45,204 @@ top:0;
 left:0;
 width:4px;
 height:4px;
-background:#FF6600;
-z-index:120;
+background:#FF9966;
+z-index:2;
 }
 
-/* ctrMenu */
-#ctrMenu{
+/* control menu */
+#controlMenu{
 position:absolute;
-top:0;
-left:0;
-width:100%;
 height:48px;
 list-style-type:none;
-z-index:200;
+z-index:100;
 }
 
-#ctrMenu > li{
+#controlMenu li{
 float:left;
-padding:0 12px;
-font:normal 20px sans-serif;
+height:48px;
+margin:0 16px;
 line-height:48px;
 }
 
-/* ctrPanels */
-#ctrPanels{
-position:absolute;
-top:0;
-left:0;
-list-style-type:none;
-z-index:400;
-overflow:visible;
+#controlMenu li a{
+color:#0000FF;
+font:normal 16px sans-serif;
 }
 
-#ctrPanels > li{
-position:absolute;
--webkit-border-radius:8px;
--webkit-box-shadow:#777777 1px 1px 10px;
-}
-
-#editor{
-position:absolute;
-width:300px;
-height:400px;
-background:#FF4444;
-}
-
-#setting{
-position:absolute;
-width:400px;
-height:200px;
-background:#44FF44;
-}
-
-#error{
-position:absolute;
-width:300px;
-height:400px;
-background:#4444FF;
-}
-
-/* errorIndicator */
-#errorIndicator{
-position:absolute;
-bottom:0;
-right:0;
-height:24px;
-font:normal 18px Helvetica, Arial, sans-serif;
-line-height:24px;
-text-align:right;
-padding:0 4px;
-z-index:300;
-}
-
-#errorIndicator > a{
-color:#AA0000;
-}
-
-#errorIndicator > a:active{
+#controlMenu li a:hover{
 text-decoration:underline;
 }
 
-.pd{
-padding:4px 8px;
+#controlMenu li a:active{
+color:#FF9933;
+}
+
+/* panels */
+#panels{
+list-style-type:none;
+position:absolute;
+z-index:300;
+}
+
+#panels li{
+position:absolute;
+-webkit-border-radius:8px;
+-webkit-box-shadow:#666666 1px 1px 8px;
+}
+
+/*  editor */
+#editor{
+min-width:300px;
+min-height:400px;
+width:300px;
+height:400px;
+background:#FF6666;
+}
+
+#control{
+margin:16px;
+}
+
+.editorTop{
+height:24px;
+margin:0 0 16px 0;
+}
+
+.closeBox{
+float:left;
+width:88px;
+}
+
+#close{
+color:#FFFFFF;
+font:normal 14px sans-serif;
+}
+
+#close:hover{
+text-decoration:underline;
+}
+
+#close:active{
+color:#DDDDDD;
+}
+
+.sampleSelector{
+float:right;
+width:180px;
+}
+
+.sampleSelector select{
+width:100%;
+}
+
+.editorMid{
+margin:-4px 8px 20px 8px;
+height:280px;
+}
+
+.editorMid p{
+height:100%;
+}
+
+.sourceMain{
+width:100%;
+height:100%;
+margin:-8px 0 0 -8px;
+padding:8px;
+resize:none;
+border:none;
+outline:none;
+font:normal 15px/18px sans-serif;
+}
+
+.editorBottom{
+height:32px;
+margin:8px 0 0 0;
+}
+
+.runButton{
+width:100%;
+height:100%;
+}
+
+#runCode{
+display:block;
+width:100%;
+height:100%;
+background:#6666FF;
+color:#FFFFFF;
+font:normal 16px sans-serif;
+text-align:center;
+line-height:32px;
+}
+
+/* setting */
+#setting{
+width:300px;
+height:200px;
+background:#66CC88;
+}
+
+#preference{
+margin:2px 16px 16px 16px;
+}
+
+.settingTitle{
+width:48px;
+height:24px;
+margin:2px auto;
+color:#FFFFFF;
+font:normal 16px/24px sans-serif;
+text-align:center;
+}
+
+.settingItem{
+padding:2px 0;
+color:#FFFFFF;
+font:normal 14px/18px sans-serif;
+}
+
+.settingItem select{
+width:100%;
+}
+
+#error{
+width:268px;
+height:268px;
+background:#994C00;
+padding:8px 16px 16px 16px;
+}
+
+.errorTitle{
+width:80px;
+height:24px;
+margin:auto;
+color:#FFFFFF;
+font:normal 16px/24px sans-serif;
+text-align:center;
+}
+
+#errorPanel{
+width:268px;
+height:244px;
+overflow-y:auto;
+background:#FFFFFF;
+}
+
+#errorPanel div{
+padding:4px;
+font:normal 13px sans-serif;
+border-bottom:solid 1px #CCCCCC;
+}
+
+/* error indicator */
+.errorIndicator{
+position:absolute;
+bottom:2px;
+right:2px;
+z-index:200;
+font:normal 15px sans-serif;
+}
+#errorIndicator{
+color:#AA0000;
 }

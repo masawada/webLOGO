@@ -16,7 +16,7 @@ var Palm = function(panels){
 	
 	for(var id in this.panels){
 		this.panels[id].element.onmousemove = function(e){
-			if(self.checkDorR_(this, e.clientX, e.clientY) === true){
+			/*if(self.checkDorR_(this, e.clientX, e.clientY) === true){
 				// resize
 				this.style.cursor = 'se-resize';
 				this.onmousedown = function(e){
@@ -24,17 +24,18 @@ var Palm = function(panels){
 					self.resizeDown_(e, this);
 					return false;
 				};
-			}else{
+			*/
+			//}else{
 				// move
 				this.style.cursor = 'all-scroll';
 				this.onmousedown = function(e){
+					self.bringToTop_(this.id);
 					if(e.target === this){
-						self.bringToTop_(this.id);
 						self.dragDown_(e, this);
 						return false;
 					}
 				};
-			}
+			//}
 		};
 		
 		this.panels[id].element.onmouseout = function(){
@@ -67,7 +68,7 @@ Palm.prototype = (function(){
 	
 	// drag and resize
 	proto.getElementData_ = function(element){
-		return {height: element.offsetHeight, width: element.offsetWidth, top: element.offsetTop, left: element.offsetLeft};
+		return {height: element.style.pixelHeight||element.offsetHeight, width: element.style.pixelWidth||element.offsetWidth, top: element.style.pixelTop||element.offsetTop, left: element.style.pixelLeft||element.offsetLeft};
 	};
 	
 	proto.checkDorR_ = function(element, cx, cy){
@@ -180,8 +181,8 @@ Palm.prototype = (function(){
 	proto.genPanelData_ = function(data){
 		var obj = {
 			element		: document.getElementById(data.id),
-			minHeight	: data.minHeight || 0,
-			minWidth	: data.minWidth || 0
+			minHeight	: document.getElementById(data.id).style.minHeight || 0,
+			minWidth	: document.getElementById(data.id).style.minWidth || 0
 		};
 		this.registDepth_(data.id);
 		return obj;
