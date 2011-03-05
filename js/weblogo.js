@@ -113,6 +113,10 @@ var init = function(){
 		}
 	};
 	
+	node.errorIndicator.onclick = function(){
+		palm.bringToTop('error');
+	};
+	
 	/* canvas Size Changer */
 	var canvasSizeChanger = function(width, height){
 		if(width === ''){

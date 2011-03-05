@@ -56,6 +56,10 @@ Palm.prototype = (function(){
 		
 	};
 	
+	proto.bringToTop = function(id){
+		this.bringToTop_(id);
+	};
+	
 	/* New feature: add/remove panel
 	proto.addPanel = function(){
 		
