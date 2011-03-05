@@ -110,6 +110,7 @@ var init = function(){
 		}else{
 			controller.notifyError(errors);
 			controller.printError(errors);
+			palm.bringToTop('error');
 		}
 	};
 	
